@@ -29,7 +29,7 @@ def test_booking_flow():
         "appointment_type": "consultation",
         "date": "2024-01-15",
         "start_time": available_slot["start_time"],
-        "patient": {"name": "John Doe", "email": "john@example.com", "phone": "+1-555-0100"},
+        "patient": {"name": "Akash Kumar", "email": "akash@example.com", "phone": "+1-555-0100"},
         "reason": "Annual checkup"
     }
 
