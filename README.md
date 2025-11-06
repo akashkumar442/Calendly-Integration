@@ -11,7 +11,7 @@ The service simulates:
 - Appointment type durations (15/30/45/60 minutes)
 - Conflict detection, no-availability handling, clean JSON responses
 
-### Tech Stacks
+### Tech Stack used
 - FastAPI (Python 3.10+)
 - Uvicorn
 
