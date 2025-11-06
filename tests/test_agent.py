@@ -1,15 +1,12 @@
 from fastapi.testclient import TestClient
 from backend.main import app
 
-
 client = TestClient(app)
-
 
 def test_health():
     r = client.get("/health")
     assert r.status_code == 200
     assert r.json()["status"] == "ok"
-
 
 def test_availability_ok():
     r = client.get("/api/calendly/availability", params={"date": "2024-01-15", "appointment_type": "consultation"})
@@ -17,7 +14,6 @@ def test_availability_ok():
     body = r.json()
     assert body["date"] == "2024-01-15"
     assert isinstance(body["available_slots"], list)
-
 
 def test_booking_flow():
     # Find a first available consultation slot on 2024-01-15
